@@ -1,0 +1,79 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/fork-awesome/1.2.0/css/fork-awesome.min.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        font-family: system-ui;
+    }
+
+    header {
+        @apply sticky top-0 z-20 bg-white border-b border-slate-300 mb-6;
+    }
+}
+
+@layer components {
+    header:has(.fa-bars, .fa-search, .fa-shopping-bag) {
+        @apply text-xl;
+    }
+
+    .social-icon {
+        @apply text-2xl mx-1 w-6 h-6 bg-transparent text-black cursor-pointer;
+    }
+
+    .social-icon:hover {
+        @apply transition delay-150 duration-200 ease-in-out text-blue-600;
+    }
+
+    /* Javascript selects this class to toggle the navbar in small devices */
+    .sideMenuShow {
+        @apply -translate-x-full transition duration-300 ease-in-out;
+    }
+
+    ul.header-nav li {
+        @apply cursor-pointer hover:underline hover:underline-offset-1 hover:text-black/60;
+    }
+
+    .main-product{
+        @apply mx-4 md:mx-24 lg:mx-4;
+    }
+
+    li.side-item {
+        @apply h-14 p-3 hover:bg-slate-200 hover:transition hover:delay-100 hover:duration-200 hover:ease-in-out;
+    }
+
+    .glass-btn {
+        @apply absolute inset-2 px-1 w-8 h-8 rounded-full border-2 text-black bg-white border-black;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    .quantity-form button,
+    input {
+        @apply w-12 h-11 bg-white text-center;
+    }
+
+    .btn-form button {
+        @apply flex justify-center items-center min-h-12 min-w-8 drop-shadow-sm rounded-full;
+    }
+
+    .tags {
+        @apply my-5;
+    }
+
+    .product-card {
+        @apply flex flex-col items-center text-center rounded-t-lg border border-slate-300 max-h-min;
+    }
+
+    .product-card img {
+        @apply w-72 h-80 object-cover rounded-t-lg transition duration-100 ease-in-out hover:scale-110 hover:overflow-hidden;
+    }
+
+    .footer-link {
+        @apply hover:font-medium hover:underline hover:underline-offset-4;
+    }
+}
