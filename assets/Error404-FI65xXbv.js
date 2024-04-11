@@ -1,0 +1,1 @@
+import{j as r}from"./index-CR777FoG.js";function s(){return r.jsx(r.Fragment,{children:r.jsx("div",{className:"bg-red-900",children:r.jsx("p",{className:"text-red-50 ",children:" Error: 404"})})})}export{s as default};
